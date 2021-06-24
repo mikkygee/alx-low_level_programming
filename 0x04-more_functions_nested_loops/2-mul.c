@@ -3,9 +3,9 @@
 /**
  * int mul - function that multiply two intergers
  *
- * @a: variable
+ * @a: First Interger
  *
- * @b: variable
+ * @b: Second interger
  *
  * Return: Always 0.
  */
