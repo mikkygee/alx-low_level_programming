@@ -28,7 +28,6 @@ else
 prinf("%k ", k);
 }
 }
-printf("Buzz");
-printf("\n");
+printf("Buzz\n");
 return (0);
 }	
