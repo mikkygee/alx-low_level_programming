@@ -1,19 +1,13 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * print_line - function that prints a straight line
- *
- * @n; variable
- *
- * Return; Always 0.
- */
-
-void print_line(int n);
+* print_line - Write a function that draws a straight line in the terminal.
+* @n: Integer amount of _
+*/
+void print_line(int n)
 {
-	char k;
+	char c;
 
-	for (k = 0; k < n; k++)
-	_putchar('_');
+	for (c = 0; c < n; c++)
+		_putchar('_');
 	_putchar('\n');
 }
