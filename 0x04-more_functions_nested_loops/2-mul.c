@@ -6,9 +6,9 @@
  * @b: second integer
  * Return: mul
  */
+
 int mul(int a, int b)
 {
-	int k = a * b;
-
-	return (k);
+int k = a * b;
+return (k);
 }	
