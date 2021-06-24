@@ -1,9 +1,10 @@
-#include "holberton.h"
+  #include "holberton.h"
+
 /**
- * mul - function that multiply two intergers
- * @a: First Interger
- * @b: Second interger
- * Return: mul.
+ * mul - multiplies two integers
+ * @a: integer 1
+ * @b: integer 2
+ * Return: 1 or 0
  */
 int mul(int a, int b)
 {
