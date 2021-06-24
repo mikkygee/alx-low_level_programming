@@ -1,33 +1,35 @@
 #include <stdio.h>
+
 /**
- * main - prints numbers 1 to 100
+ * main - prints nultplies of 3 or 5
  *
- * Return: Always 0.
+ * Description: multiples between 0 and 100
+ * Return: Always(0)
  */
 
 int main(void)
 {
-int k;
-	
-for (k = 1; k <= 99; k++)
+int i;
+
+for (i = 1; i <= 99; i++)
 {
-if (k % 15 == 0)
+if (i % 15 == 0)
 {
-printf("FizzBuzz" );
+printf("FizzBuzz ");
 }
-else if (k % 3 == 0)
+else if (i % 3 == 0)
 {
-printf("Fizz" );
+printf("Fizz ");
 }
-else if (k % 5 == 0)
+else if (i % 5 == 0)
 {
-printf("Buzz" );
+printf("Buzz ");
 }
 else
 {
-prinf("%k ", k);
+printf("%i ", i);
 }
 }
 printf("Buzz\n");
 return (0);
-}	
+}
