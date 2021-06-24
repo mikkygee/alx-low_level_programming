@@ -4,9 +4,11 @@
  * mul - function that multiply two intergers
  * @a: First Interger
  * @b: Second interger
- * Return: Always 0.
+ * Return: mul.
  */
 int mul(int a, int b)
 {
-return (a * b);
+	int k = a * b;
+
+	return (k);
 }	
