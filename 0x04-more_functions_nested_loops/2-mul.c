@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * mul - function that multiply two intergers
  * @a: First Interger
