@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
-*main - check the code for ALX School students.
+*_isupper - function that checks for uppercase.
+*
+*@c: variable text
 *
 *Return: Always 0.
 */
