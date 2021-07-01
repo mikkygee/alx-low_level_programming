@@ -6,23 +6,19 @@
  *
  * Return: void
  */
+
 char *_strcat(char *dest, char *src)
 {
+	int ctr;
 	int i;
-	int j;
 
-	i = 0;
-	while (dest[i] != '\0')
+	for (ctr = 0; dest[ctr]; ctr++)
 	{
-		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
+	for (i = 0; src[i]; i++, ctr++)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest[ctr] = src[i];
 	}
-	dest[i] = '\0';
+	dest[ctr] = '\0';
 	return (dest);
 }
