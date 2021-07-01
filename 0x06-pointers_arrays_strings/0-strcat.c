@@ -1,10 +1,13 @@
 #include "holberton.h"
+
 /**
- * _strcat - concatenates two strings
- * @dest: input value
- * @src: input value
+ * *_strcat - function being used for project 0.
  *
- * Return: void
+ * @dest: is the char 1.
+ *
+ * @src: is the char 2.
+ *
+ * Return: - zero/NULL.
  */
 
 char *_strcat(char *dest, char *src)
