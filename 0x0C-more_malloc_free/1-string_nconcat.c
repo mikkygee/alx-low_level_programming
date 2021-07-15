@@ -1,22 +1,39 @@
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
 /**
- * *_calloc - call
- * @nmemb: n
- * @size: size
- * Return: 0
- */
-void *_calloc(unsigned int nmemb, unsigned int size)
+ * *string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
+ **/
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
-	char *memory;
+	char *strDup;
+	int i;
+	unsigned int j;
 
-	if (nmemb == 0 || size == 0)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	strDup = malloc(sizeof(char) * (i + n + 1));
+	if (strDup == NULL)
 		return (NULL);
-	memory = malloc(nmemb * size);
-	if (memory == NULL)
-		return (NULL);
-	for (i = 0; i < nmemb * size; i++)
-		*(memory + i) = 0;
-	return ((void *)memory);
+	i = j = 0;
+	while (s1[i] != '\0')
+	{
+		strDup[i] = s1[i];
+		i++;
+	}
+	while (j < n && s2[j] != '\0')
+	{
+		strDup[i] = s2[j];
+		i++, j++;
+	}
+	strDup[i] = '\0';
+	return (strDup);
 }
