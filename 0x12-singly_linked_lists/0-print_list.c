@@ -1,23 +1,23 @@
 #include "lists.h"
 
 /**
- * free_list - frees a list_t list
- *
- * @head: head to the list
- *
- * Return: void
+ * print_list - function to print list
+ * @h: pointer to the beginning of the list
+ * Return: The count of elements
  */
-
-void free_list(list_t *head)
+size_t print_list(const list_t *h)
 {
-	list_t *current = head;
-	list_t *next;
+	size_t count = 0;
 
-	while (current)
+	while (h != NULL)
 	{
-		next = current->next;
-		free(current->str);
-		free(current);
-		current = next;
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		h = h->next;
+		count++;
 	}
+
+	return (count);
 }
