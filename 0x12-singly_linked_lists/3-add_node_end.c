@@ -1,35 +1,34 @@
 #include "lists.h"
-#include "_strlen.c"
-/**
- * add_node_end - adds a new node at the end of a list_t list.
- * @head: list head
- * @str: string value will be stored in str var of the struct node
- * Return: the address of the new node or NULL if it failed
- */
 
+/**
+ * add_node_end - add new node to the end of list_t
+ * @head: pointer to the pointer of beginning of list_t
+ * @str: string to be added
+ * Return: New node added
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node = (list_t *)malloc(sizeof(list_t)), *tmp = *head;
-	char *string = strdup(str);
+	list_t *add, *current;
+	int a;
 
-	if (new_node == NULL || string == NULL)
-	{
-		free(new_node);
+	if (head == NULL)
 		return (NULL);
-	}
-
-	while (tmp && tmp->next != NULL)
-	{
-		tmp = tmp->next;
-	}
-	new_node->str = string;
-	new_node->len = _strlen(string);
-	new_node->next = NULL;
-
-	if (tmp)
-		tmp->next = new_node;
+	add = malloc(sizeof(list_t));
+	if (add == NULL)
+		return (NULL);
+	if (*head == NULL)
+		*head = add;
 	else
-		*head = new_node;
-
-	return (new_node);
+	{
+		current = *head;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = add;
+	}
+	add->next = NULL;
+	add->str = strdup(str);
+	for (a = 0; str[a] != '\0'; a++)
+		;
+	add->len = a;
+	return (add);
 }
