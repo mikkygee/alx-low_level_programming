@@ -5,6 +5,7 @@
  * @h: pointer to the beginning of the list
  * Return: The count of elements
  */
+
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
